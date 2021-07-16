@@ -1,0 +1,27 @@
+query q1 {
+  adItem {
+    contentItemId
+    displayText
+    markdownBody {
+      html
+      markdown
+    }
+    categoryAd {
+      taxonomyContentItem {
+        displayText
+      }
+      termContentItems {
+        displayText
+      }
+    }
+    statusAd {
+      taxonomyContentItem {
+        displayText
+      }
+      termContentItems {
+        displayText
+        author
+      }
+    }
+  }
+}

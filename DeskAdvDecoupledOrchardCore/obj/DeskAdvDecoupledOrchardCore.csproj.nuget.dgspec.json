@@ -1,0 +1,176 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\spAdmin\\source\\repos\\DeskAdvDecoupledOrchardCore\\DeskAdvDecoupledOrchardCore\\DeskAdvDecoupledOrchardCore.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\spAdmin\\source\\repos\\DeskAdvDecoupledOrchardCore\\DeskAdvDecoupledOrchardCore.CRUD\\DeskAdvDecoupledOrchardCore.CRUD.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\spAdmin\\source\\repos\\DeskAdvDecoupledOrchardCore\\DeskAdvDecoupledOrchardCore.CRUD\\DeskAdvDecoupledOrchardCore.CRUD.csproj",
+        "projectName": "DeskAdvDecoupledOrchardCore.CRUD",
+        "projectPath": "C:\\Users\\spAdmin\\source\\repos\\DeskAdvDecoupledOrchardCore\\DeskAdvDecoupledOrchardCore.CRUD\\DeskAdvDecoupledOrchardCore.CRUD.csproj",
+        "packagesPath": "C:\\Users\\spAdmin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\spAdmin\\source\\repos\\DeskAdvDecoupledOrchardCore\\DeskAdvDecoupledOrchardCore.CRUD\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\spAdmin\\source\\repos\\DeskAdvDecoupledOrchardCore\\NuGet.Config",
+          "C:\\Users\\spAdmin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.myget.org/F/orchardcore-preview/api/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "OrchardCore.ContentManagement": {
+              "target": "Package",
+              "version": "[1.0.0-rc2-*, )"
+            },
+            "OrchardCore.ContentTypes.Abstractions": {
+              "target": "Package",
+              "version": "[1.0.0-rc2-*, )"
+            },
+            "OrchardCore.DisplayManagement": {
+              "target": "Package",
+              "version": "[1.0.0-rc2-*, )"
+            },
+            "OrchardCore.Module.Targets": {
+              "target": "Package",
+              "version": "[1.0.0-rc2-*, )"
+            },
+            "OrchardCore.Navigation.Core": {
+              "target": "Package",
+              "version": "[1.0.0-rc2-*, )"
+            },
+            "OrchardCore.Title": {
+              "target": "Package",
+              "version": "[1.0.0-rc2-*, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\spAdmin\\source\\repos\\DeskAdvDecoupledOrchardCore\\DeskAdvDecoupledOrchardCore\\DeskAdvDecoupledOrchardCore.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\spAdmin\\source\\repos\\DeskAdvDecoupledOrchardCore\\DeskAdvDecoupledOrchardCore\\DeskAdvDecoupledOrchardCore.csproj",
+        "projectName": "DeskAdvDecoupledOrchardCore",
+        "projectPath": "C:\\Users\\spAdmin\\source\\repos\\DeskAdvDecoupledOrchardCore\\DeskAdvDecoupledOrchardCore\\DeskAdvDecoupledOrchardCore.csproj",
+        "packagesPath": "C:\\Users\\spAdmin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\spAdmin\\source\\repos\\DeskAdvDecoupledOrchardCore\\DeskAdvDecoupledOrchardCore\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\spAdmin\\source\\repos\\DeskAdvDecoupledOrchardCore\\NuGet.Config",
+          "C:\\Users\\spAdmin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.myget.org/F/orchardcore-preview/api/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\spAdmin\\source\\repos\\DeskAdvDecoupledOrchardCore\\DeskAdvDecoupledOrchardCore.CRUD\\DeskAdvDecoupledOrchardCore.CRUD.csproj": {
+                "projectPath": "C:\\Users\\spAdmin\\source\\repos\\DeskAdvDecoupledOrchardCore\\DeskAdvDecoupledOrchardCore.CRUD\\DeskAdvDecoupledOrchardCore.CRUD.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "OrchardCore.Application.Cms.Core.Targets": {
+              "target": "Package",
+              "version": "[1.0.0-rc2-*, )"
+            },
+            "OrchardCore.Logging.NLog": {
+              "target": "Package",
+              "version": "[1.0.0-rc2-*, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

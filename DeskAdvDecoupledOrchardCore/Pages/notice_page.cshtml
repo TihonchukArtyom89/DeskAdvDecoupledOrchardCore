@@ -1,0 +1,50 @@
+﻿
+@page "/notice/{slug}"
+@inject OrchardCore.IOrchardHelper Orchard
+
+@{
+    var ad_list_id = await Orchard.GetContentItemIdByAliasAsync("alias:объявления");
+    var notice = await Orchard.GetContentItemByHandleAsync($"alias:{Slug}");
+    string stat_tax_id = @notice.Content.AdItem.StatusAd.TaxonomyContentItemId;
+    string stat_term_id = @notice.Content.AdItem.StatusAd.TermContentItemIds[0];
+    var stat_text = await Orchard.GetTaxonomyTermAsync(@stat_tax_id, @stat_term_id);
+    string сat_tax_id = @notice.Content.AdItem.CategoryAd.TaxonomyContentItemId;
+    string сat_term_id = @notice.Content.AdItem.CategoryAd.TermContentItemIds[0];
+    var сat_text = await Orchard.GetTaxonomyTermAsync(@сat_tax_id, @сat_term_id);
+    var not = notice;
+}
+
+@*<script>
+   function delete_notice()
+   {
+       @notice.ContentType="del";
+       @del
+   }
+</script>*@
+<h1>Страница объявления </h1>
+<div class="alert alert-success">
+    <a href="../Admin/Contents/ContentItems/@notice.ContentItemId/Edit?returnUrl=%2FAdmin%2FContents%2FContentItems%2F@ad_list_id%2FDisplay%3FreturnUrl%3D%252FAdmin%252FContents%252FContentItems%253Fadmin%253D-1933353348">Редактировать объявление</a>
+    <a href="../Admin/Contents/ContentItems/@notice.ContentItemId/Delete?returnUrl=%2FAdmin%2FContents%2FContentItems%2F@ad_list_id%2FDisplay%3FreturnUrl%3D%252FAdmin%252FContents%252FContentItems%253Fadmin%253D-1933353348">Удалить объявление</a>
+    <a href="../board">Доска объявлений</a>
+</div>
+
+@*<div class="alert alert-secondary">
+    <button onclick=delete_notice()>Удалить</button>
+</div>*@
+<div class="text-left alert alert-info">
+    <div class="alert alert-light">Заголовок Объявления: @notice.Content.TitlePart.Title</div>
+    <div class="alert alert-light">Дата публикации объявления: @notice.Content.AdItem.PublicateDate.Value</div>
+    <div class="alert alert-light">Автор объявления: @notice.Author</div>
+    <div class="alert alert-light">Текст объявления: <p>@await Orchard.MarkdownToHtmlAsync((string)notice.Content.MarkdownBodyPart.Markdown)</p></div>
+    <div class="alert alert-light">Статус объявления: @stat_text</div>
+    <div class="alert alert-light">Категория объявления: @сat_text</div>
+</div>
+
+@Orchard.ConsoleLog(notice)
+
+@functions
+{
+    [FromRoute]
+    public string Slug { get; set; }
+    
+}

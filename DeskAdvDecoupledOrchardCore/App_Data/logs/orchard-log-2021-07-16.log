@@ -1,0 +1,128 @@
+2021-07-16 09:07:04.7755|Default||20f55fda-4df00ddf57127b13.||Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|ERROR|An unhandled exception has occurred while executing the request. System.NullReferenceException: Object reference not set to an instance of an object.
+   at ContentQueryOrchardRazorHelperExtensions.ContentQueryAsync(IOrchardHelper orchardHelper, String queryName, IDictionary`2 parameters) in C:\projects\orchardcore\src\OrchardCore.Modules\OrchardCore.Queries\Razor\ContentQueryOrchardRazorHelperExtensions.cs:line 17
+   at DeskAdvDecoupledOrchardCore.Pages.Pages_board_page.ExecuteAsync() in C:\Users\spAdmin\source\repos\DeskAdvDecoupledOrchardCore\DeskAdvDecoupledOrchardCore\Pages\board_page.cshtml:line 25
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddleware.Invoke(HttpContext context)
+   at OrchardCore.Apis.GraphQL.GraphQLMiddleware.Invoke(HttpContext context, IAuthorizationService authorizationService, IAuthenticationService authenticationService, ISchemaFactory schemaService) in C:\projects\orchardcore\src\OrchardCore.Modules\OrchardCore.Apis.GraphQL\GraphQLMiddleware.cs:line 47
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at OrchardCore.Diagnostics.DiagnosticsStartupFilter.<>c__DisplayClass3_0.<<Configure>b__1>d.MoveNext() in C:\projects\orchardcore\src\OrchardCore.Modules\OrchardCore.Diagnostics\DiagnosticsStartupFilter.cs:line 36
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at OrchardCore.ContentPreview.PreviewStartupFilter.<>c.<<Configure>b__1_1>d.MoveNext() in C:\projects\orchardcore\src\OrchardCore.Modules\OrchardCore.ContentPreview\PreviewStartupFilter.cs:line 23
+--- End of stack trace from previous location where exception was thrown ---
+   at OrchardCore.Modules.ModularTenantRouterMiddleware.Invoke(HttpContext httpContext) in C:\projects\orchardcore\src\OrchardCore\OrchardCore\Modules\ModularTenantRouterMiddleware.cs:line 63
+   at OrchardCore.Environment.Shell.Scope.ShellScope.UsingAsync(Func`2 execute) in C:\projects\orchardcore\src\OrchardCore\OrchardCore.Abstractions\Shell\Scope\ShellScope.cs:line 206
+   at OrchardCore.Modules.ModularTenantContainerMiddleware.Invoke(HttpContext httpContext) in C:\projects\orchardcore\src\OrchardCore\OrchardCore\Modules\ModularTenantContainerMiddleware.cs:line 59
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)    at ContentQueryOrchardRazorHelperExtensions.ContentQueryAsync(IOrchardHelper orchardHelper, String queryName, IDictionary`2 parameters) in C:\projects\orchardcore\src\OrchardCore.Modules\OrchardCore.Queries\Razor\ContentQueryOrchardRazorHelperExtensions.cs:line 17
+   at DeskAdvDecoupledOrchardCore.Pages.Pages_board_page.ExecuteAsync() in C:\Users\spAdmin\source\repos\DeskAdvDecoupledOrchardCore\DeskAdvDecoupledOrchardCore\Pages\board_page.cshtml:line 25
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddleware.Invoke(HttpContext context)
+   at OrchardCore.Apis.GraphQL.GraphQLMiddleware.Invoke(HttpContext context, IAuthorizationService authorizationService, IAuthenticationService authenticationService, ISchemaFactory schemaService) in C:\projects\orchardcore\src\OrchardCore.Modules\OrchardCore.Apis.GraphQL\GraphQLMiddleware.cs:line 47
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at OrchardCore.Diagnostics.DiagnosticsStartupFilter.<>c__DisplayClass3_0.<<Configure>b__1>d.MoveNext() in C:\projects\orchardcore\src\OrchardCore.Modules\OrchardCore.Diagnostics\DiagnosticsStartupFilter.cs:line 36
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at OrchardCore.ContentPreview.PreviewStartupFilter.<>c.<<Configure>b__1_1>d.MoveNext() in C:\projects\orchardcore\src\OrchardCore.Modules\OrchardCore.ContentPreview\PreviewStartupFilter.cs:line 23
+--- End of stack trace from previous location where exception was thrown ---
+   at OrchardCore.Modules.ModularTenantRouterMiddleware.Invoke(HttpContext httpContext) in C:\projects\orchardcore\src\OrchardCore\OrchardCore\Modules\ModularTenantRouterMiddleware.cs:line 63
+   at OrchardCore.Environment.Shell.Scope.ShellScope.UsingAsync(Func`2 execute) in C:\projects\orchardcore\src\OrchardCore\OrchardCore.Abstractions\Shell\Scope\ShellScope.cs:line 206
+   at OrchardCore.Modules.ModularTenantContainerMiddleware.Invoke(HttpContext httpContext) in C:\projects\orchardcore\src\OrchardCore\OrchardCore\Modules\ModularTenantContainerMiddleware.cs:line 59
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-07-16 09:35:14.3014|Default||ebc5d2ca-46b9c126ca376352.||Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|ERROR|An unhandled exception has occurred while executing the request. System.NullReferenceException: Object reference not set to an instance of an object.
+   at ContentQueryOrchardRazorHelperExtensions.ContentQueryAsync(IOrchardHelper orchardHelper, String queryName, IDictionary`2 parameters) in C:\projects\orchardcore\src\OrchardCore.Modules\OrchardCore.Queries\Razor\ContentQueryOrchardRazorHelperExtensions.cs:line 17
+   at DeskAdvDecoupledOrchardCore.Pages.Pages_board_page.ExecuteAsync() in C:\Users\spAdmin\source\repos\DeskAdvDecoupledOrchardCore\DeskAdvDecoupledOrchardCore\Pages\board_page.cshtml:line 21
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddleware.Invoke(HttpContext context)
+   at OrchardCore.Apis.GraphQL.GraphQLMiddleware.Invoke(HttpContext context, IAuthorizationService authorizationService, IAuthenticationService authenticationService, ISchemaFactory schemaService) in C:\projects\orchardcore\src\OrchardCore.Modules\OrchardCore.Apis.GraphQL\GraphQLMiddleware.cs:line 47
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at OrchardCore.Diagnostics.DiagnosticsStartupFilter.<>c__DisplayClass3_0.<<Configure>b__1>d.MoveNext() in C:\projects\orchardcore\src\OrchardCore.Modules\OrchardCore.Diagnostics\DiagnosticsStartupFilter.cs:line 36
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at OrchardCore.ContentPreview.PreviewStartupFilter.<>c.<<Configure>b__1_1>d.MoveNext() in C:\projects\orchardcore\src\OrchardCore.Modules\OrchardCore.ContentPreview\PreviewStartupFilter.cs:line 23
+--- End of stack trace from previous location where exception was thrown ---
+   at OrchardCore.Modules.ModularTenantRouterMiddleware.Invoke(HttpContext httpContext) in C:\projects\orchardcore\src\OrchardCore\OrchardCore\Modules\ModularTenantRouterMiddleware.cs:line 63
+   at OrchardCore.Environment.Shell.Scope.ShellScope.UsingAsync(Func`2 execute) in C:\projects\orchardcore\src\OrchardCore\OrchardCore.Abstractions\Shell\Scope\ShellScope.cs:line 206
+   at OrchardCore.Modules.ModularTenantContainerMiddleware.Invoke(HttpContext httpContext) in C:\projects\orchardcore\src\OrchardCore\OrchardCore\Modules\ModularTenantContainerMiddleware.cs:line 59
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)    at ContentQueryOrchardRazorHelperExtensions.ContentQueryAsync(IOrchardHelper orchardHelper, String queryName, IDictionary`2 parameters) in C:\projects\orchardcore\src\OrchardCore.Modules\OrchardCore.Queries\Razor\ContentQueryOrchardRazorHelperExtensions.cs:line 17
+   at DeskAdvDecoupledOrchardCore.Pages.Pages_board_page.ExecuteAsync() in C:\Users\spAdmin\source\repos\DeskAdvDecoupledOrchardCore\DeskAdvDecoupledOrchardCore\Pages\board_page.cshtml:line 21
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddleware.Invoke(HttpContext context)
+   at OrchardCore.Apis.GraphQL.GraphQLMiddleware.Invoke(HttpContext context, IAuthorizationService authorizationService, IAuthenticationService authenticationService, ISchemaFactory schemaService) in C:\projects\orchardcore\src\OrchardCore.Modules\OrchardCore.Apis.GraphQL\GraphQLMiddleware.cs:line 47
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at OrchardCore.Diagnostics.DiagnosticsStartupFilter.<>c__DisplayClass3_0.<<Configure>b__1>d.MoveNext() in C:\projects\orchardcore\src\OrchardCore.Modules\OrchardCore.Diagnostics\DiagnosticsStartupFilter.cs:line 36
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at OrchardCore.ContentPreview.PreviewStartupFilter.<>c.<<Configure>b__1_1>d.MoveNext() in C:\projects\orchardcore\src\OrchardCore.Modules\OrchardCore.ContentPreview\PreviewStartupFilter.cs:line 23
+--- End of stack trace from previous location where exception was thrown ---
+   at OrchardCore.Modules.ModularTenantRouterMiddleware.Invoke(HttpContext httpContext) in C:\projects\orchardcore\src\OrchardCore\OrchardCore\Modules\ModularTenantRouterMiddleware.cs:line 63
+   at OrchardCore.Environment.Shell.Scope.ShellScope.UsingAsync(Func`2 execute) in C:\projects\orchardcore\src\OrchardCore\OrchardCore.Abstractions\Shell\Scope\ShellScope.cs:line 206
+   at OrchardCore.Modules.ModularTenantContainerMiddleware.Invoke(HttpContext httpContext) in C:\projects\orchardcore\src\OrchardCore\OrchardCore\Modules\ModularTenantContainerMiddleware.cs:line 59
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)

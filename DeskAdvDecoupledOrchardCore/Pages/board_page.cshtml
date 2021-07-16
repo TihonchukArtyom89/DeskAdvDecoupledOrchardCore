@@ -1,0 +1,92 @@
+﻿@*@page
+    @model DeskAdvDecoupledOrchardCore.Pages.board_pageModel
+    @{
+    }*@
+@*@page
+    @model DeskAdvDecoupledOrchardCore.Pages.BoardModel
+    @{
+    }*@
+@page "/board/"
+@inject OrchardCore.IOrchardHelper Orchard
+@{
+    var ad_list_id = await Orchard.GetContentItemIdByAliasAsync("alias:объявления");
+    var ad_list = await Orchard.QueryListItemsAsync(ad_list_id);
+    var ad_arr = ad_list.ToArray();
+    var ad_count = await Orchard.QueryListItemsCountAsync(ad_list_id);
+    var cat_list_id = await Orchard.GetContentItemIdByAliasAsync("alias:Category");
+    var cat_list = await Orchard.GetContentItemByIdAsync(cat_list_id);
+    var name_category = "Категория Объявления";
+    var getCategoryIdURL = "../api/graphql?query={taxonomy(where: { displayText: \"" + name_category+ "\"}) {contentItemId}}";
+    var getCategoryIdQuery = "{taxonomy(where: { displayText: \"" + name_category + "\"}) {contentItemId}}";
+    //var id_content_category = await Orchard.QueryAsync(getCategoryIdQuery);
+    var id_content_category = "zaglushka";
+    //var cat_arr = await Orchard.GetInheritedTermsAsync(cat_list_id, cat_list_id);
+    //var cat_dropdown_list_len = cat_list.Content.TaxonomyPart.Terms.DisplayText.Length + 1;
+    //var cat_dropdown_list = new string[cat_dropdown_list_len];
+    //cat_dropdown_list[0] = "Все категории";
+    //for (var i = 1; i < cat_dropdown_list_len; i++)
+    //{
+    //    cat_dropdown_list[i] = cat_list.Content.TaxonomyPart.Terms[i];
+    //}
+
+}
+<script>
+
+</script>
+
+<h1>Доска Объявлений</h1>
+@id_content_category
+<div class="text-left">
+    <a href="@getCategoryIdURL">ZAPROS</a>
+    <a href="../">На главную</a>
+    <a href="../Admin/Contents/ContentTypes/AdItem/Create?ListPart.ContainerId=@ad_list_id&ListPart.EnableOrdering=False">Создать новое объявление</a>
+</div>
+
+<ul class="list-group with-checkbox">
+
+    @if (ad_count > 0)
+    {
+        @for (var i = 0; i < ad_count; i++)
+        {
+            var ad_item = ad_arr[i];
+            string stat_tax_id = @ad_item.Content.AdItem.StatusAd.TaxonomyContentItemId;
+            string stat_term_id = @ad_item.Content.AdItem.StatusAd.TermContentItemIds[0];
+            var stat_text = await Orchard.GetTaxonomyTermAsync(@stat_tax_id, @stat_term_id);
+            string сat_tax_id = @ad_item.Content.AdItem.CategoryAd.TaxonomyContentItemId;
+            string сat_term_id = @ad_item.Content.AdItem.CategoryAd.TermContentItemIds[0];
+            var сat_text = await Orchard.GetTaxonomyTermAsync(@сat_tax_id, @сat_term_id);
+            <li class="list-group-item">
+                <div class="alert alert-info">
+                    <div class="alert alert-light">Заголовок: <a href="../notice/@ad_item.Content.AliasPart.Alias">@ad_item.Content.TitlePart.Title</a></div>
+                    <div class="alert alert-secondary">Дата публикации: @ad_item.Content.AdItem.PublicateDate.Value</div>
+                    <div class="alert alert-secondary">Категория: @сat_text</div>
+                    <div class="alert alert-secondary">Статус: @stat_text</div>
+                    <div class="alert alert-secondary">Автор: @ad_item.Author</div>
+                </div>
+            </li>
+        }
+    }
+    else
+    {
+        <li class="list-group-item">
+            <div class="alert alert-info">
+                Объявлений на сайте нет.
+            </div>
+        </li>
+    }
+</ul>
+@Orchard.ConsoleLog("adv list id" + ad_list_id)
+@Orchard.ConsoleLog(ad_list)
+@Orchard.ConsoleLog("category adv list id" + cat_list_id)
+@Orchard.ConsoleLog(cat_list)
+@Orchard.ConsoleLog(id_content_category)
+@*@Orchard.ConsoleLog(cat_arr)*@
+@*@Orchard.ConsoleLog(cat_dropdown_list_len)
+    @Orchard.ConsoleLog(cat_dropdown_list)*@
+@functions
+{
+    [FromRoute]
+    public string Id { get; set; }
+
+    [FromRoute] public string Slug { get; set; }
+}

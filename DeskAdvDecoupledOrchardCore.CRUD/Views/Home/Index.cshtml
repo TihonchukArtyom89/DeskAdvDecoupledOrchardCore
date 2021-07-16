@@ -1,0 +1,44 @@
+@model ListContentsViewModel
+@using OrchardCore.ContentManagement;
+@using DeskAdvDecoupledOrchardCore.CRUD.ViewModels;
+@inject IContentManager ContentManager
+@inject OrchardCore.IOrchardHelper Orchard
+
+@{ var pageTitle = T["Desk of advertisments."];
+    var bull_list = Model.ContentItems; }
+@Orchard.ConsoleLog("bull_list")
+@Orchard.ConsoleLog(bull_list)
+<h1>@RenderTitleSegments(pageTitle)</h1>
+<a asp-action="Create" asp-controller="Home">@T["Create new advertisment"]</a>
+<form asp-action="List" asp-controller="Admin" method="post" id="items-form" autocomplete="off">
+    <ul class="list-group with-checkbox">
+        @*@Orchard.ConsoleLog(Model.ContentItems)*@
+        @if (Model.ContentItems.Count > 0)
+        {
+
+@for (var i = 0; i < Model.ContentItems.Count; i++)
+{
+    var itlist = Model.ContentItems[i];
+
+<li class="list-group-item">
+    @await DisplayAsync(itlist)
+    @*<div><a href="">edit</a><br><a href="">delete</a></div>*@
+</li>} @*@foreach (var contentItemSummary in Model.ContentItems)
+        {
+
+        <li class="list-group-item">
+            @await DisplayAsync(contentItemSummary)
+            <div><a href="">edit</a><br><a href="">delete</a></div>
+        </li>
+    }*@ }
+else
+{
+<li class="list-group-item">
+    <div class="alert alert-info">
+        @T["No advertisments on site."]
+    </div>
+</li>}
+    </ul>
+
+    @await DisplayAsync(Model.Pager)
+</form>
