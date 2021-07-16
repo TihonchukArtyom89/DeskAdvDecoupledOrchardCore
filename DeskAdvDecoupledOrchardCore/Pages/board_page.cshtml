@@ -1,4 +1,4 @@
-﻿@*@page
+@*@page
     @model DeskAdvDecoupledOrchardCore.Pages.board_pageModel
     @{
     }*@
@@ -6,8 +6,10 @@
     @model DeskAdvDecoupledOrchardCore.Pages.BoardModel
     @{
     }*@
+
 @page "/board/"
 @inject OrchardCore.IOrchardHelper Orchard
+@*@using Newtonsoft.Json;*@
 @{
     var ad_list_id = await Orchard.GetContentItemIdByAliasAsync("alias:объявления");
     var ad_list = await Orchard.QueryListItemsAsync(ad_list_id);
@@ -16,12 +18,12 @@
     var cat_list_id = await Orchard.GetContentItemIdByAliasAsync("alias:Category");
     var cat_list = await Orchard.GetContentItemByIdAsync(cat_list_id);
     var name_category = "Категория Объявления";
-    var getCategoryIdURL = "../api/graphql?query={taxonomy(where: { displayText: \"" + name_category+ "\"}) {contentItemId}}";
-    var getCategoryIdQuery = "{taxonomy(where: { displayText: \"" + name_category + "\"}) {contentItemId}}";
-    //var id_content_category = await Orchard.QueryAsync(getCategoryIdQuery);
-    var id_content_category = "placeholder";
-    //var cat_arr = await Orchard.GetInheritedTermsAsync(cat_list_id, cat_list_id);
-    //var cat_dropdown_list_len = cat_list.Content.TaxonomyPart.Terms.DisplayText.Length + 1;
+    var getCategoryIdURL = "../api/graphql?query={taxonomy(where: { displayText: \"" + name_category + "\"}) {contentItemId}}";
+    //var getCategoryIdQuery = "{taxonomy(where: { displayText: \"" + name_category + "\"}) {contentItemId}}";
+    //var id_content_category = await Orchard.QueryListItemsAsync(cat_list_id);
+    ///var id_content_category = "zzz";
+
+    var cat_dropdown_list_len = cat_list.Content.TaxonomyPart.Terms.Count + 1;
     //var cat_dropdown_list = new string[cat_dropdown_list_len];
     //cat_dropdown_list[0] = "Все категории";
     //for (var i = 1; i < cat_dropdown_list_len; i++)
@@ -35,7 +37,7 @@
 </script>
 
 <h1>Доска Объявлений</h1>
-@id_content_category
+@*@id_content_category*@
 <div class="text-left">
     <a href="@getCategoryIdURL">ZAPROS</a>
     <a href="../">На главную</a>
@@ -79,7 +81,8 @@
 @Orchard.ConsoleLog(ad_list)
 @Orchard.ConsoleLog("category adv list id" + cat_list_id)
 @Orchard.ConsoleLog(cat_list)
-@Orchard.ConsoleLog(id_content_category)
+@*@Orchard.ConsoleLog(at)*@
+@*@Orchard.ConsoleLog(id_content_category)*@
 @*@Orchard.ConsoleLog(cat_arr)*@
 @*@Orchard.ConsoleLog(cat_dropdown_list_len)
     @Orchard.ConsoleLog(cat_dropdown_list)*@
